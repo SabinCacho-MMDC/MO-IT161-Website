@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+
+:root{
+    --background: rgb(242, 255, 233);
+    --light: rgb(166, 207, 152);
+    --dark: rgb(85, 124, 85);
+    --highlight: rgb(250, 112, 112);
+}
+
+body{
+    background-color: var(--background);
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+}
+
+#profile-selector{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profile-selector-align{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.square{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    width: 40vw;
+    height: 10vh;
+    text-align: center;
+    margin: 50px 10px 50px;
+    transition: 0.3s background-color;
+    font-size: 30px;
+}
+
+.square:hover{
+    background-color: var(--dark);
+    color: var(--background);
+}
