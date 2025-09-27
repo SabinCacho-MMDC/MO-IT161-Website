@@ -59,7 +59,7 @@ section{
     left: 50%;
     overflow: hidden;
 
-    background-image: url(../img/arrow.svg);
+    background-image: url(styles/img/arrow.svg);
     background-color: rgba(144, 144, 144, 0.075);
     background-position: center center;
     background-repeat: no-repeat;
