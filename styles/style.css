@@ -36,7 +36,7 @@ section{
     min-height: 100dvh;
 }
 
-#img-placeholder{
+.img-placeholder{
     display: block;
     overflow: hidden;
     white-space: nowrap;
@@ -47,6 +47,9 @@ section{
 
     height: 30%;
     min-width: 30%;
+}
+
+.img-placeholder#profile-picture{
     margin-left: 40px;
 }
 
@@ -65,13 +68,11 @@ section{
     bottom: 3em;
     
     line-height: 4em;
-    margin-left: -2em;
+    margin-left: 1vm;
     margin-top: 10%;
     text-indent: 4em;
     white-space: nowrap;
     width: 4em;
-
-    
 }
 
 .goto-next:hover {
@@ -125,4 +126,35 @@ section{
 .content{
     margin-left: 50px;
     margin-right: 50px;
+}
+
+#img-past-work{
+    display: inline;
+    width: 80%;
+    height: auto;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+td{
+    text-align: center;
+    vertical-align: middle;
+    word-wrap: break-word;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+}
+
+.td-icon{
+    height: auto;
+    width: 5vw;
+}
+
+.logo-label{
+    font-size: 0.8em;
 }
