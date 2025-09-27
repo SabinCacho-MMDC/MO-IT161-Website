@@ -117,15 +117,22 @@ section{
     color: var(--background);
 }
 
+div p{
+    margin: 0;
+    padding: 0;
+}
+
 .side-by-side{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    clear: none;
 }
 
 .content{
     margin-left: 50px;
     margin-right: 50px;
+    margin-bottom: -450px;
 }
 
 #img-past-work{
