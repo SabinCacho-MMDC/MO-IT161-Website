@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../html5up-highlights"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MO-IT161-Portfolio"
+	}
+}

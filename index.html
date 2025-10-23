@@ -11,8 +11,8 @@
         <section id="profile-selector" class="wrapper selector">
             <h1>Hello, I am</h1>
             <div id="profile-selector-align">
-                <div class="profile-selector square">Sabin</div>
-                <div class="profile-selector square">Gio</div>
+                <button class="profile-selector square" id="profile-button sabin">Sabin</button>
+                <button class="profile-selector square" id="profile-button gio">Gio</button>
             </div>
             
         </section>
@@ -20,23 +20,23 @@
         <section id="about-me" class="wrapper">
             <h2>About Me</h2>
             <div class="side-by-side content">
-                <p>Cupidatat officia cillum qui est et qui enim esse do consequat cupidatat consequat culpa. Lorem proident consectetur consectetur in labore proident exercitation ipsum incididunt cupidatat eu magna. Mollit eu consectetur proident esse aliquip id cillum nostrud officia do.
+                <p id="about-me-content">Cupidatat officia cillum qui est et qui enim esse do consequat cupidatat consequat culpa. Lorem proident consectetur consectetur in labore proident exercitation ipsum incididunt cupidatat eu magna. Mollit eu consectetur proident esse aliquip id cillum nostrud officia do.
 
     Do cupidatat labore officia est fugiat culpa elit non sunt sint. Culpa mollit irure voluptate commodo. Aute enim excepteur cupidatat qui ea fugiat culpa aliqua ut aliqua dolore. Magna laboris occaecat minim ipsum excepteur nulla amet magna nulla aute. Aliqua ad veniam veniam ut sunt anim do enim tempor consequat aliquip.
 
     Deserunt tempor adipisicing est in labore labore eiusmod ut eiusmod laborum exercitation dolor. Laboris ex cillum dolor sunt qui eu quis officia pariatur sit id. Duis ea excepteur nulla reprehenderit magna in ut id laboris consequat deserunt. Exercitation elit magna est deserunt Lorem. In sint irure nostrud laboris culpa mollit ex et quis. Elit in qui aliqua tempor non elit consectetur tempor. Lorem elit nulla dolor laborum dolor Lorem non est quis.</p>
-                <img src="styles/img/placeholder.png" class="img-placeholder" id="profile-picture"/>
+                <img src="styles/img/placeholder.png" class="img-round" id="profile-picture"/>
             </div>
-            <a href="#past-works" class="goto-next"></a>
+            <button id="past-works-button" class="goto-next"></button>
         </section>
 
         <section id="past-works" class="wrapper selector">
             <div id="past-work-align">
                 <table>
                     <tr id="past-work-images">
-                        <td><img src="styles/img/placeholder.png" id="img-past-work" class="img-placeholder"/></td>
-                        <td><img src="styles/img/placeholder.png" id="img-past-work" class="img-placeholder"/></td>
-                        <td><img src="styles/img/placeholder.png" id="img-past-work" class="img-placeholder"/></td>
+                        <td><img src="styles/img/placeholder.png" id="img-past-work-1" class="img-round img-past-work"/></td>
+                        <td><img src="styles/img/placeholder.png" id="img-past-work-2" class="img-round img-past-work"/></td>
+                        <td><img src="styles/img/placeholder.png" id="img-past-work-3" class="img-round img-past-work"/></td>
                     </tr>
                     <tr id="past-work-names">
                         <td>Work 1</td>
@@ -45,7 +45,7 @@
                     </tr>
                 </table>
             </div>
-            <a href="#contact-info" class="goto-next"></a>
+            <button id="contact-info-button" class="goto-next"></button>
         </section>
 
         <section id="contact-info" class="wrapper selector">
@@ -59,14 +59,16 @@
                     <td class="logo"><img src="styles/img/twitter.png" class="td-icon hueshift" /></td>
                 </tr>
                 <tr id="contact-info-entries">
-                    <td class="logo-label">0998-998-9999</td>
-                    <td class="logo-label">bro_mail@email.com</td>
-                    <td class="logo-label">bro_linked@in.com</td>
-                    <td class="logo-label">Bro Man</td>
-                    <td class="logo-label">@brodie.crodie</td>
-                    <td class="logo-label">@crodiebrodie</td>
+                    <td class="logo-label" id="contact-number">0998-998-9999</td>
+                    <td class="logo-label" id="contact-email">bro_mail@email.com</td>
+                    <td class="logo-label" id="contact-linkedin">bro_linked@in.com</td>
+                    <td class="logo-label" id="contact-facebook">Bro Man</td>
+                    <td class="logo-label" id="contact-instagram">@brodie.crodie</td>
+                    <td class="logo-label" id="contact-twitter">@crodiebrodie</td>
                 </tr>
             </table>
         </section>
+
+        <script type="text/javascript" src="scripts/script.js"></script>
     </body>
 </html>

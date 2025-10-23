@@ -36,7 +36,11 @@ section{
     min-height: 100dvh;
 }
 
-.img-placeholder{
+#about-me{
+    padding-top: 200px;
+}
+
+.img-round{
     display: block;
     overflow: hidden;
     white-space: nowrap;
@@ -49,8 +53,9 @@ section{
     min-width: 30%;
 }
 
-.img-placeholder#profile-picture{
+.img-round#profile-picture{
     margin-left: 40px;
+    max-width: 30%;
 }
 
 .goto-next{
@@ -90,10 +95,15 @@ section{
 
 #profile-selector-align{
     display: flex;
-    justify-content: space-around;
     flex-direction: row;
+    justify-content: space-around;    
 
     width: 100%;
+}
+
+.profile-selector{
+    border: none;
+    border-radius: 10px;
 }
 
 .square{
@@ -135,7 +145,7 @@ div p{
     margin-bottom: -450px;
 }
 
-#img-past-work{
+.img-past-work{
     display: inline;
     width: 80%;
     height: auto;
