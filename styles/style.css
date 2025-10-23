@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
+body { height:auto; min-height:100%; overflow: none;}
+html { height: 100%; }
+
+
 :root{
     --background: rgb(242, 255, 233);
     --light: rgb(166, 207, 152);
@@ -36,6 +40,11 @@ section{
     min-height: 100dvh;
 }
 
+section#profile-selector{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 #about-me{
     padding-top: 200px;
 }
@@ -61,10 +70,11 @@ section{
 .goto-next{
     display: block;
     height: 4em;
-    left: 50%;
-    overflow: hidden;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
 
-    background-image: url(/styles/img/arrow.svg);
+    background-image: url(../styles/img/arrow.svg);
     background-color: rgba(144, 144, 144, 0.075);
     background-position: center center;
     background-repeat: no-repeat;
@@ -73,7 +83,6 @@ section{
     bottom: 3em;
     
     line-height: 4em;
-    margin-left: 1vm;
     margin-top: 10%;
     text-indent: 4em;
     white-space: nowrap;
@@ -132,8 +141,15 @@ div p{
     padding: 0;
 }
 
+.horizontal{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-start;
+}
+
 .side-by-side{
     display: flex;
+    flex: 1;
     flex-direction: row;
     justify-content: space-between;
     clear: none;
