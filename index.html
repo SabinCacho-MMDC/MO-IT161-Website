@@ -4,10 +4,11 @@
         <title>Portfolio</title>
         <meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 		<link rel="stylesheet" href="styles/style.css" />
     </head>
     
-    <body>
+    <body onLoad="changeContent()">
         <section id="profile-selector" class="wrapper selector">
             <h1>Hello, I am</h1>
             <div id="profile-selector-align">
@@ -18,53 +19,77 @@
 
         <section id="about-me" class="wrapper">
             <h2>About Me</h2>
-            <div class="side-by-side content">
-                <p id="about-me-content">Cupidatat officia cillum qui est et qui enim esse do consequat cupidatat consequat culpa. Lorem proident consectetur consectetur in labore proident exercitation ipsum incididunt cupidatat eu magna. Mollit eu consectetur proident esse aliquip id cillum nostrud officia do.
+            <div class="side-by-side content row align-self-center align-items-center">
+                <div class="col-md-6 d-flex justify-content-center px-4">
+                    <p id="about-me-content">Cupidatat officia cillum qui est et qui enim esse do consequat cupidatat consequat culpa. Lorem proident consectetur consectetur in labore proident exercitation ipsum incididunt cupidatat eu magna. Mollit eu consectetur proident esse aliquip id cillum nostrud officia do.
 
-        Do cupidatat labore officia est fugiat culpa elit non sunt sint. Culpa mollit irure voluptate commodo. Aute enim excepteur cupidatat qui ea fugiat culpa aliqua ut aliqua dolore. Magna laboris occaecat minim ipsum excepteur nulla amet magna nulla aute. Aliqua ad veniam veniam ut sunt anim do enim tempor consequat aliquip.
+            Do cupidatat labore officia est fugiat culpa elit non sunt sint. Culpa mollit irure voluptate commodo. Aute enim excepteur cupidatat qui ea fugiat culpa aliqua ut aliqua dolore. Magna laboris occaecat minim ipsum excepteur nulla amet magna nulla aute. Aliqua ad veniam veniam ut sunt anim do enim tempor consequat aliquip.
 
-        Deserunt tempor adipisicing est in labore labore eiusmod ut eiusmod laborum exercitation dolor. Laboris ex cillum dolor sunt qui eu quis officia pariatur sit id. Duis ea excepteur nulla reprehenderit magna in ut id laboris consequat deserunt. Exercitation elit magna est deserunt Lorem. In sint irure nostrud laboris culpa mollit ex et quis. Elit in qui aliqua tempor non elit consectetur tempor. Lorem elit nulla dolor laborum dolor Lorem non est quis.</p>
-                <img src="styles/img/placeholder.png" class="img-round" id="profile-picture"/>
+            Deserunt tempor adipisicing est in labore labore eiusmod ut eiusmod laborum exercitation dolor. Laboris ex cillum dolor sunt qui eu quis officia pariatur sit id. Duis ea excepteur nulla reprehenderit magna in ut id laboris consequat deserunt. Exercitation elit magna est deserunt Lorem. In sint irure nostrud laboris culpa mollit ex et quis. Elit in qui aliqua tempor non elit consectetur tempor. Lorem elit nulla dolor laborum dolor Lorem non est quis.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="styles/img/placeholder.png" class="img-round" id="profile-picture"/>
+                </div>
             </div>
             <a id="past-works-button" class="goto-next"></a>
         </section>
 
-        <section id="past-works" class="wrapper selector">
+        <section id="past-works" class="wrapper selector flex">
             <div id="past-work-align">
-                <table>
-                    <tr id="past-work-images">
-                        <td><img src="styles/img/placeholder.png" id="img-past-work-1" class="img-round img-past-work"/></td>
-                        <td><img src="styles/img/placeholder.png" id="img-past-work-2" class="img-round img-past-work"/></td>
-                        <td><img src="styles/img/placeholder.png" id="img-past-work-3" class="img-round img-past-work"/></td>
-                    </tr>
-                    <tr id="past-work-names">
-                        <td>Work 1</td>
-                        <td>Work 2</td>
-                        <td>Work 3</td>
-                    </tr>
-                </table>
+                <div class="row align-self-center align-items-center">
+                    <div id="past-work" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;" onclick="changeSelectedWork(this)">
+                        <img src="styles/img/placeholder.png" id="img-past-work-1" class="img-round img-past-work"/>
+                        <p>Work 1</p>
+                    </div>
+                    <div id="past-work" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;" onclick="changeSelectedWork(this)">
+                        <img src="styles/img/placeholder.png" id="img-past-work-2" class="img-round img-past-work"/>
+                        <p>Work 2</p>
+                    </div>
+                    <div id="past-work" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;" onclick="changeSelectedWork(this)">
+                        <img src="styles/img/placeholder.png" id="img-past-work-3" class="img-round img-past-work"/>
+                        <p>Work 3</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="past-work-selected" class="row position-absolute w-75 flex-row align-self-center align-items-center" onclick="hideSelectedWork(this)">
+                <div class="col-lg-6 text-center d-flex flex-column align-items-center py-5">
+                    <img src="styles/img/placeholder.png" id="img-past-work-1" class="img-round"/> 
+                </div>
+                <div class="col-lg-6 text-center d-flex flex-column align-items-center py-5">
+                    <p>Deserunt tempor adipisicing est in labore labore eiusmod ut eiusmod laborum exercitation dolor. Laboris ex cillum dolor sunt qui eu quis officia pariatur sit id. Duis ea excepteur nulla reprehenderit magna in ut id laboris consequat deserunt. Exercitation elit magna est deserunt Lorem. In sint irure nostrud laboris culpa mollit ex et quis. Elit in qui aliqua tempor non elit consectetur tempor. Lorem elit nulla dolor laborum dolor Lorem non est quis.</p>
+                </div>
             </div>
             <a id="contact-info-button" class="goto-next"></a>
         </section>
 
         <section id="contact-info" class="wrapper selector">
-            <table>
-                <tr id="contact-info-icons">
-                    <td class="logo"><img src="styles/img/telephone.png" class="td-icon hueshift"/></td>
-                    <td class="logo"><img src="styles/img/mail.png" class="td-icon hueshift" /></td>
-                    <td class="logo"><img src="styles/img/linkedin.png" class="td-icon hueshift" /></td>
-                    <td class="logo"><img src="styles/img/facebook.png" class="td-icon hueshift" /></td>
-                    <td class="logo"><img src="styles/img/instagram.png" class="td-icon hueshift" /></td>
-                    <td class="logo"><img src="styles/img/twitter.png" class="td-icon hueshift" /></td>
-                </tr>
-                <tr id="contact-info-entries">
-                    <td class="logo-label" id="contact-number">0998-998-9999</td>
-                    <td class="logo-label" id="contact-email">bro_mail@email.com</td>
-                    <td class="logo-label" id="contact-linkedin">bro_linked@in.com</td>
-                    <td class="logo-label" id="contact-facebook">Bro Man</td>
-                    <td class="logo-label" id="contact-instagram">@brodie.crodie</td>
-                    <td class="logo-label" id="contact-twitter">@crodiebrodie</td>
-                </tr>
+            <div class="row align-self-center align-items-center">
+                <div id="contact-info-entries" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;">
+                    <img src="styles/img/telephone.png" class="td-icon hueshift"/>
+                    <p class="logo-label" id="contact-number">0998-998-9999</p>
+                </div>
+                <div id="contact-info-entries" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;">
+                    <img src="styles/img/mail.png" class="td-icon hueshift" />
+                    <p class="logo-label" id="contact-email">bro_mail@email.com</p>
+                </div>
+                <div id="contact-info-entries" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;">
+                    <img src="styles/img/linkedin.png" class="td-icon hueshift" />
+                    <p class="logo-label" id="contact-linkedin">bro_linked@in.com</p>
+                </div>
+                <div id="contact-info-entries" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;">
+                    <img src="styles/img/facebook.png" class="td-icon hueshift" />
+                    <p class="logo-label" id="contact-facebook">Bro Man</p>
+                </div>
+                <div id="contact-info-entries" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;">
+                    <img src="styles/img/instagram.png" class="td-icon hueshift" />
+                    <p class="logo-label" id="contact-instagram">@brodie.crodie</p>
+                </div>
+                <div id="contact-info-entries" class="col-sm-4 text-center d-flex flex-column align-items-center py-5" style="cursor:pointer;">
+                    <img src="styles/img/twitter.png" class="td-icon hueshift" />
+                    <p class="logo-label" id="contact-twitter">@crodiebrodie</p>
+                </div>
+            </div>
             </table>
         </section>
         <script type="text/javascript" src="scripts/script.js"></script>

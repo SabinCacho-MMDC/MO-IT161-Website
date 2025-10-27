@@ -49,22 +49,25 @@ section#profile-selector{
     padding-top: 200px;
 }
 
+#about-me-content{
+    padding-left: 5vw;
+}
+
 .img-round{
     display: block;
     overflow: hidden;
     white-space: nowrap;
     background-repeat: no-repeat;
+    margin: 5%;
 
-    border-radius: 100%;
+    border-radius: 50%;
     border: 2px solid grey;
 
-    height: 30%;
-    min-width: 30%;
-}
+    height: 20vw;
+    width: 20vw;
 
-.img-round#profile-picture{
-    margin-left: 40px;
-    max-width: 30%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .goto-next{
@@ -72,7 +75,7 @@ section#profile-selector{
     height: 4em;
     position: sticky;
     bottom: 0;
-    z-index: 1000;
+    z-index: 999;
 
     background-image: url(../styles/img/arrow.svg);
     background-color: rgba(144, 144, 144, 0.075);
@@ -113,6 +116,7 @@ section#profile-selector{
 .profile-selector{
     border: none;
     border-radius: 10px;
+    text-decoration: none;
 }
 
 .square{
@@ -129,6 +133,7 @@ section#profile-selector{
     
     transition: 0.3s background-color;
     font-size: 30px;
+    color: black;
 }
 
 .square:hover{
@@ -149,22 +154,10 @@ div p{
 
 .side-by-side{
     display: flex;
-    flex: 1;
+    /* flex: 1;
     flex-direction: row;
     justify-content: space-between;
-    clear: none;
-}
-
-.content{
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: -450px;
-}
-
-.img-past-work{
-    display: inline;
-    width: 80%;
-    height: auto;
+    clear: none; */
 }
 
 table{
@@ -190,4 +183,16 @@ td{
 
 .logo-label{
     font-size: 0.8em;
+}
+
+#past-work-selected{
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1000;
+
+    border-radius: 10px;
+    filter:drop-shadow(5px 5px 4px rgba(92, 92, 92, 0.418));
+
+    cursor: pointer;
 }
